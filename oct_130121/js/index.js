@@ -1,0 +1,17 @@
+var moneyAmountString;
+var costOneLiterGasolineString;
+var fuelConsumptionString;
+var distanceString;
+var moneyAmount, costOneLiterGasoline, fuelConsumption, userDistance,calculatingDistance, amountOfGasoline, answer;
+moneyAmountString = prompt('Введите сумму денег на топливо: ');
+costOneLiterGasolineString = prompt('Введите стоимость одного литра бензина: ');
+fuelConsumptionString = prompt('Введите расход топлива автомобиля на 100км: ');
+distanceString = prompt('Введите дистанцию которую хотите проехать (в км)');
+moneyAmount = +moneyAmountString;
+costOneLiterGasoline = +costOneLiterGasolineString;
+fuelConsumption = +fuelConsumptionString;
+userDistance = +distanceString;
+amountOfGasoline = moneyAmount / costOneLiterGasoline;
+calculatingDistance = (amountOfGasoline / fuelConsumption) * 100;
+answer = calculatingDistance >= userDistance;
+alert('Вам хватит введеных средств на поездку: ' + answer);
